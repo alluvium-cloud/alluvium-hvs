@@ -2,7 +2,7 @@
 
 
 resource "hcp_service_principal" "this" {
-  name   = "tfc-sp"
+  name   = var.hcp_service_principal_name
   parent = "project/${var.hcp_project_id}"
 }
 
@@ -13,7 +13,7 @@ resource "hcp_project_iam_binding" "this" {
 }
 
 resource "hcp_iam_workload_identity_provider" "aws" {
-  name              = "hcp-terraform-aws"
+  name              = var.hcp_iam_workload_identity_provider_name
   service_principal = hcp_service_principal.this.resource_name
   description       = "Allow my-app on AWS to act as my-app-runtime service principal"
 

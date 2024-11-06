@@ -8,6 +8,10 @@ terraform {
       source  = "hashicorp/hcp"
       version = "~> 0.97.0"
     }
+    tfe = {
+      source  = "hashicorp/tfe"
+      version = "0.59.0"
+    }
   }
 
   cloud {

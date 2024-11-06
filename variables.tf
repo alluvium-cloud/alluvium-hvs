@@ -2,6 +2,14 @@ variable "aws_region" {
   description = "Region for the AWS VPC"
 }
 
+variable "hvs_secret_name" {
+  type = string
+}
+
+variable "hvs_integration_name" {
+  type = string
+}
+
 variable "hvs_aws_audience" {
   type = string
 }
@@ -32,5 +40,13 @@ variable "tfc_workspace_name" {
 }
 
 variable "hcp_project_id" {
+  type = string
+}
+
+variable "hcp_service_principal_name" {
+  type = string
+}
+
+variable "hcp_iam_workload_identity_provider_name" {
   type = string
 }
