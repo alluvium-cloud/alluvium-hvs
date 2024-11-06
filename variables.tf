@@ -23,14 +23,12 @@ variable "tfc_organization_name" {
 
 variable "tfc_project_name" {
   type        = string
-  default     = "Default Project"
-  description = "The project under which a workspace will be created"
+  description = "The project to connect to AWS"
 }
 
 variable "tfc_workspace_name" {
   type        = string
-  default     = "dynamic-credentials-trust-relationship"
-  description = "The name of the workspace that you'd like to create and connect to AWS"
+  description = "The workspace to connect to AWS"
 }
 
 variable "hcp_project_id" {
